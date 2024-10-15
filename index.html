@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="array"></div>
+    </div>
+    <div class="controls">
+        <button id="countingSortButton">Counting Sort</button>
+        <button id="bubbleSortButton">Bubble Sort</button>
+        <button id="heapSortButton">Heap Sort</button>
+        <button id="quickSortButton">Quick Sort</button>
+        <button id="mergeSortButton">Merge Sort</button>
+    </div>
+    <div class="text">
+        <div class="countingSort hover-effect">
+            <h2>Counting Sort</h2>
+            <p>
+                &#9658; Uses O(M+N) Time Complexity where N and M are the size of <b>inputArray[]</b> and <b>countArray[]</b> respectively.
+                <br>
+                &#9658; Advantages :
+                 <br>1. Faster than comparison-based sorting algorithms for small input ranges.
+                 <br>2. Stable and easy to code.
+                <br>&#9658; Disadvantages :
+                 <br>1. Doesn’t work on decimal values.
+                 <br>2. Inefficient for large ranges.
+            </p>
+        </div>
+        
+        <div class="heapSort hover-effect">
+            <h2>Heap Sort</h2>
+            &#9658; Uses O(NlogN) Time Complexity where N is the size of the array.
+            <br>&#9658; Advantages :
+            <br>1. Efficient time complexity and minimal memory usage.
+            <br>&#9658; Disadvantages :
+            <br>1. Costly constants compared to merge sort.
+        </div>
+        
+        <div class="quickSort hover-effect">
+            <h2>Quick Sort</h2>
+            <p>
+                &#9658; Uses O(NlogN) Time Complexity on average, but O(N<sup>2</sup>) in the worst case if the pivot selection is poor.
+                <br><br>
+                &#9658; Advantages :
+                <br>1. Efficient for large datasets with good pivot selection.
+                <br>2. In-place sorting algorithm, meaning it requires very little additional memory.
+                <br>3. Faster than other O(NlogN) algorithms like merge sort due to fewer data movements.
+                <br><br>
+                &#9658; Disadvantages :
+                <br>1. Not stable: Relative ordering of equal elements might not be preserved.
+                <br>2. Worst-case time complexity of O(N<sup>2</sup>) can be avoided with careful pivot selection (e.g., using randomized or median-of-three pivot selection).
+            </p>
+        </div>
+
+        <div class="mergeSort hover-effect">
+            <h2>Merge Sort</h2>
+            <p>
+                &#9658; Uses O(NlogN) Time Complexity in all cases.
+                <br><br>
+                &#9658; Advantages :
+                <br>1. Consistently performs well with O(NlogN) time complexity for all cases (best, worst, and average).
+                <br>2. Stable sorting algorithm, meaning it maintains the relative order of equal elements.
+                <br>3. Well-suited for sorting linked lists due to the ability to efficiently merge lists.
+                <br><br>
+                &#9658; Disadvantages :
+                <br>1. Requires O(N) additional memory for auxiliary arrays during the merge process.
+                <br>2. Not as efficient as quick sort for in-place memory usage since it uses extra space.
+            </p>
+        </div>
+
+        <div class="bubbleSort hover-effect">
+            <h2>Bubble Sort</h2>
+            &#9658; Uses O(N<sup>2</sup>) Time Complexity where N is the size of the array.
+            <br>&#9658; Advantages :
+            <br>1. Simple to understand and implement.
+            <br>&#9658; Disadvantages :
+            <br>1. Very slow for large datasets.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
